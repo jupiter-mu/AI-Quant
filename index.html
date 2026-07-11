@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Quant | 量化交易研究</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f5f4f0; color: #2c2c2a; line-height: 1.7;
+}
+:root { --up: #cc0000; --dn: #009966; }
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #fff; padding: 60px 24px; text-align: center;
+}
+.hero h1 { font-size: 36px; font-weight: 500; margin-bottom: 8px; }
+.hero p { font-size: 16px; color: #a0a8c0; max-width: 600px; margin: 0 auto; }
+.hero .sub { margin-top: 16px; font-size: 13px; color: #6c7588; }
+
+/* Container */
+.container { max-width: 900px; margin: 0 auto; padding: 32px 20px; }
+
+/* Project cards */
+.projects { display: grid; gap: 20px; }
+.card {
+  background: #fff; border-radius: 12px; border: 0.5px solid #e0ded6;
+  padding: 20px 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s, transform 0.2s;
+  text-decoration: none; color: inherit; display: block;
+}
+.card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.08); transform: translateY(-2px); }
+.card h3 { font-size: 17px; font-weight: 500; color: #2c2c2a; margin-bottom: 4px; }
+.card h3 span { color: var(--up); }
+.card .date { font-size: 11px; color: #b4b2a9; margin-bottom: 8px; }
+.card .desc { font-size: 13px; color: #5f5e5a; line-height: 1.7; }
+.card .tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag {
+  font-size: 10px; padding: 2px 8px; border-radius: 10px;
+  background: #f1efe8; color: #5f5e5a; border: 0.5px solid #d3d1c7;
+}
+.tag.hl { background: #fef0f0; color: var(--up); border-color: #f5c4b3; }
+
+/* Section header */
+.section-hd { margin: 32px 0 16px; border-bottom: 0.5px solid #e0ded6; padding-bottom: 8px; }
+.section-hd h2 { font-size: 20px; font-weight: 500; }
+
+/* Profile */
+.profile {
+  background: #fff; border-radius: 12px; border: 0.5px solid #e0ded6;
+  padding: 20px 24px; margin-bottom: 24px; font-size: 13px; color: #5f5e5a;
+  display: flex; gap: 16px; align-items: center;
+}
+
+/* Footer */
+.footer { text-align: center; padding: 32px; font-size: 12px; color: #b4b2a9; }
+.footer a { color: #5f5e5a; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>AI·Quant</h1>
+  <p>基于 Python 的量化交易研究项目 — 双均线策略回测、技术指标分析、A股多标的对比</p>
+  <div class="sub">jupiter-mu | 2026</div>
+</div>
+
+<div class="container">
+
+  <div class="section-hd"><h2>核心项目</h2></div>
+  <div class="projects">
+
+    <a href="task3_dual_ma/output/dual_ma_report.html" class="card">
+      <h3><span>双均线策略交互式看板</span></h3>
+      <div class="date">2026-07-11 · v7</div>
+      <div class="desc">
+        5只A股（寒武纪/宁德时代/工商银行/中信证券/阳光电源）的全量前复权数据，支持单策略回测、多策略对比、多股票对比三种模式。动态1年期国债收益率（中债官网），8项量化指标（含夏普比率、Alpha、超额收益），仓位管理+单笔止损风控。
+      </div>
+      <div class="tags">
+        <span class="tag hl">HTML 看板</span>
+        <span class="tag">Plotly 图表</span>
+        <span class="tag">Jupyter</span>
+        <span class="tag">MA 策略</span>
+        <span class="tag">5 只标的</span>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="section-hd"><h2>研究模块</h2></div>
+  <div class="projects">
+
+    <a href="task2_indicator_lab/indicators_report.html" class="card">
+      <h3>技术指标分析实验室</h3>
+      <div class="date">2026-07-04</div>
+      <div class="desc">
+        寒武纪的技术指标深度分析，包含 MACD、RSI、KDJ、布林带、OBV 等十余种技术指标的交互式可视化报告。
+      </div>
+      <div class="tags">
+        <span class="tag">技术指标</span>
+        <span class="tag">MACD</span>
+        <span class="tag">RSI</span>
+        <span class="tag">KDJ</span>
+      </div>
+    </a>
+
+    <a href="task1/catl_ah_report.html" class="card">
+      <h3>宁德时代 AH 股对比分析</h3>
+      <div class="date">2026-07-04</div>
+      <div class="desc">
+        宁德时代 A 股（300750）与 H 股 A+H 市场的价格、估值、流动性对比分析报告。
+      </div>
+      <div class="tags">
+        <span class="tag">AH 股</span>
+        <span class="tag">宁德时代</span>
+        <span class="tag">跨市场</span>
+      </div>
+    </a>
+
+    <a href="task1/cambricon_kline.html" class="card">
+      <h3>寒武纪 K 线分析</h3>
+      <div class="date">2026-07-04</div>
+      <div class="desc">
+        寒武纪（688256）的日线 K 线图、成交量、均线等可视化分析报告。
+      </div>
+      <div class="tags">
+        <span class="tag">K 线</span>
+        <span class="tag">寒武纪</span>
+        <span class="tag">可视化</span>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="section-hd"><h2>数据 & 工具</h2></div>
+  <div class="projects">
+
+    <div class="card">
+      <h3>数据源 & 技术栈</h3>
+      <div class="desc">
+        <b>数据源</b>：Tushare Pro（股价+复权因子）、中债信息网（1年期国债收益率）、AkShare（辅助）<br>
+        <b>Python 环境</b>：3.13.14，量化全家桶（numpy/pandas/scipy/matplotlib/plotly/tushare/akshare/ta/statsmodels/scikit-learn/xgboost/lightgbm/jupyterlab）<br>
+        <b>可视化</b>：Plotly.js 交互式图表（支持缩放、悬停、范围选择）
+      </div>
+      <div class="tags">
+        <span class="tag">Tushare</span>
+        <span class="tag">AkShare</span>
+        <span class="tag">Plotly</span>
+        <span class="tag">Python 3.13</span>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="footer">
+  <a href="https://github.com/jupiter-mu/AI-Quant">github.com/jupiter-mu/AI-Quant</a>
+</div>
+
+</body>
+</html>
