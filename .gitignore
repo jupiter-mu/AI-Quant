@@ -22,3 +22,10 @@ Thumbs.db
 # Environment
 .env
 .env.local
+
+# WorkBuddy workspace files
+.workbuddy/
+
+# Test scratch files
+_check.js
+_test.js
